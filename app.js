@@ -7,6 +7,12 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
+app.get('/', (req, res) => {
+    res.send({
+        URL: "https://amreek-weather-app.herokuapp.com/weather?address=Delhi"
+    })
+});
+
 app.get('/weather', (req, res) => {
     const address = req.query.address;
 
